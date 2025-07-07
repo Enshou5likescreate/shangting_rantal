@@ -26,7 +26,7 @@ public class SmsServiceImpl implements SmsService {
 
             Message.creator(
                     new PhoneNumber(phone),        // 受信者の電話番号（例：+819012345678）
-                    new PhoneNumber("+16073182610"), // Twilioから発行された電話番号
+                    new PhoneNumber(TwilioSMSProperties.TWILIO_PONHE_NUMBER), // Twilioから発行された電話番号
                     messageBody
             ).create();
 
